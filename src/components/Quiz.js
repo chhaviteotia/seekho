@@ -4,7 +4,7 @@ import { QuizContext } from "../contexts/quiz";
 
 const Quiz = () => {
   const [quizState, dispatch] = useContext(QuizContext);
-  const[countdown,setCountdown] = useState(10)
+  const[countdown,setCountdown] = useState(60)
 
   console.log(quizState)
   var timer = useRef() ;
@@ -24,7 +24,7 @@ const Quiz = () => {
 
   return (
     <div className="quiz">
-      <div>Countdown : {countdown}</div>
+      <div>Countdown : {countdown} seconds</div>
       {quizState.showResults && (
         <div className="results">
           <div className="congratulations">Congratulations!</div>
